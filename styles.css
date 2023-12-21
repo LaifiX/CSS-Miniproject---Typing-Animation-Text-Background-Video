@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2? family= Caveat:wght@600 & family= Exo+2:wght@100;300;400 & family= Pacifico & display=swap' );
+
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #670505;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    font-family: 'Caveat', cursive;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Pacifico', cursive;
+}
+
+video {
+    width:80%;
+    border-radius: 25px;
+    box-shadow: rgba(17, 17, 26, 0.8) 0px 4px 16px, rgba(17, 17, 26, 0.8) 0px 8px 24px, rgba(17, 17, 26, 0.8) 0px 16px 56px;
+
+}
+
+.wrapper {
+    display:flex;
+    background: black;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 25px;
+}
+
+.wrapper .first-text {
+    font-size: 60px;
+    color:#fff;
+    vertical-align: center;
+}
+
+.wrapper .sec-text {
+    height: 100px;
+    line-height: 75px;
+    overflow: hidden;
+}
+
+.sec-text li {
+    position: relative;
+    top: 0;
+    font-size: 80px;
+    color: #0ef;
+    list-style: none;
+    padding: 0px 50px;
+    padding-bottom: 30px;
+    text-shadow: 0 0 10px #0ef;
+    animation: slide 12s steps(4) infinite, colorful
+    6s infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -428px;
+    }
+}
+
+@keyframes colorful {
+    100% {
+        filter:hue-rotate(360deg);
+    }
+}
+
+.sec-text li span {
+    position:relative;
+}
+
+.sec-text li span::before {
+    content: '';
+    position: absolute;
+    left:0%;
+    width:750px;
+    height:100px;
+    background:black;
+    border-left: 2px solid #0ef;
+    animation: typing 1.5s steps(17) infinite
+    alternate;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
